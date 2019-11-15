@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP 2 EXERCÍCIO 2</title>
+</head>
+
+<body onload="calcular()">
+    <a id="voltar" href="../index.html">Voltar</a>
+    
+    <p id="resultado"></p>
+</body>
+
+</html>
+<script>
+function calcular() {
+    var i = document.getElementById("resultado")
+    var p = 0
+    var numero = Number(window.prompt("Entre com um número"))
+
+
+    for (let i = 1; i <= numero; i++) {
+        if(numero%i == 0){
+            p++
+        }
+    }   
+
+    if(p == 2){
+        i.innerHTML = `${numero} é primo`
+    }else{
+        i.innerHTML = `${numero} não é primo`
+    }
+}
+</script>
+<style>
+
+    #folha{
+        text-align:center;
+        background-color:white;
+        margin-left:20%;
+        margin-right:20%;
+        padding:10px;        
+    }
+
+    body{
+        background-color:rgb(83, 6, 70);
+    }
+
+</style>

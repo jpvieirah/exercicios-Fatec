@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP 2 EXERCÍCIO 1</title>
+</head>
+
+<body onload="calcular()">
+    <a id="voltar" href="../index.html">Voltar</a>
+    
+    <p id="resultado"></p>
+</body>
+
+</html>
+<script>
+var sal = 0
+
+function calcular() {
+    if (sal < 25) {
+        var p = document.getElementById("resultado")
+
+        var salario = Number(window.prompt("Digite seu salário: \n\n" + (25 - sal) + " salários restantes"))
+
+
+        if (salario <= 500) {
+            salario += (salario * 0.05)
+        } else if (salario <= 1200) {
+            salario += (salario * 0.12)
+        }
+
+        if (salario <= 600) {
+            salario += 150
+        } else {
+            salario += 100
+        }
+
+        alert("Seu novo salário é:  R$ " + salario.toFixed(2))
+        sal++
+
+        calcular()
+    }else{
+        return false
+    }
+}
+</script>
+<style>
+
+    #folha{
+        text-align:center;
+        background-color:white;
+        margin-left:20%;
+        margin-right:20%;
+        padding:10px;        
+    }
+
+    body{
+        background-color:rgb(83, 6, 70);
+    }
+
+</style>

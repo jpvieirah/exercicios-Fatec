@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP 2 EXERCÍCIO 3</title>
+</head>
+<body onload="calcular()">
+    <a id="voltar" href="../index.html">Voltar</a>
+    
+    <p id="resultado"></p>
+</body>
+</html>
+<script>
+function calcular() {
+    var p = document.getElementById("resultado")
+    var aux, prox
+    var atual = 1
+    var ant = 0
+    var qtd = Number(window.prompt("Digite a quantidade de termos"))
+
+    p.innerHTML += "1 "
+    for(let i = 0; i < qtd; i++){
+        prox = ant + atual
+        aux = ant
+        ant = atual 
+        atual = prox
+        
+        p.innerHTML += " " + prox 
+    }
+
+}
+</script>
+<style>
+
+    #folha{
+        text-align:center;
+        background-color:white;
+        margin-left:20%;
+        margin-right:20%;
+        padding:10px;        
+    }
+
+    body{
+        background-color:rgb(83, 6, 70);
+    }
+
+</style>
